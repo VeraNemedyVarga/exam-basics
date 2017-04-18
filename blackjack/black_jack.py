@@ -25,20 +25,30 @@ class Card(object):
 class Deck(object):
     def __init__(self, number_of_cards):
         self.number_of_cards = number_of_cards
+
+    def create_list(self, number_of_cards):
         self.list_of_cards = []
         for n in range(self.number_of_cards):
+            while card.color[n] == card.color[n - 1]:
+                card.color[n - 1].color = card.random_color
             self.list_of_cards.append(Card().chosen_card)
+        return self.list_of_cards
 
 
+    def shuffle(self):
+        random.shuffle(self.list_of_cards)
+        return self.list_of_cards
 
 
 card = Card()
-
 deck = Deck(4)
 print(card.chosen_card)
-print(deck.list_of_cards)
+print(deck.create_list(4))
+print(deck.shuffle())
 
-print(deck)
+
+
+#print(deck)
 # Should print out:
 # 12 cards -  3 Clubs, 3 Diamonds, 3 Hearts, 3 Spades
 
