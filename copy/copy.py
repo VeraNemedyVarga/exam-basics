@@ -42,7 +42,7 @@ class Model(object):
             self.destination.write("\n" + lines)
         self.source.close()
         self.destination.close()
-        
+
 class View(object):
 
     def print_usage(self):
@@ -51,6 +51,7 @@ class View(object):
     def print_with_one_argument_provided(self):
         print("No destination provided")
 
+
+view = View()
 controller = Controller()
 model = Model()
-view = View()
