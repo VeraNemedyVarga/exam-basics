@@ -25,12 +25,23 @@ class Controller(object):
     def controller(self):
         if len(self.list_argv) == 0:
             View().print_usage()
+        elif len(self.list_argv) >= 1 and (''.join(self.list_argv[1:])):
+            Model().copy_file()
+        elif len(self.list_argv) >= 1:
+            View().print_with_one_argument_provided()
 
+class Model(object):
+
+    def copy_file(self):
+        pass
 
 class View(object):
 
     def print_usage(self):
         print("copy [source] [destination]")
+
+    def print_with_one_argument_provided(self):
+        print("No destination provided")
 
 controller = Controller()
 view = View()
