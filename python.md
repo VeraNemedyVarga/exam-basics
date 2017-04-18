@@ -36,14 +36,14 @@ The application is accepted if:
 
 #### Your answer:
 [add your answer here]   
-1:   
-2:   
-3:   
-4:   
-5:   
-6:   
-7:   
+1:   keyword, that indicates function definition is coming
+2:   function name
+3:   function parameter
+4:   body of the function
+5:   local variable inside function
+6:   statement that executes at the end of function
+7:   return value of function
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-[add your answer here]
+In OOP, if you create a constructor to a class, the constructor method and everything in it will run every time you create a new instantiation of that class.
