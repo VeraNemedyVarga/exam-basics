@@ -39,12 +39,22 @@ class Deck(object):
         random.shuffle(self.list_of_cards)
         return self.list_of_cards
 
+    def draw(self):
+        print(self.list_of_cards[-1])
+        return self.list_of_cards.remove(self.list_of_cards[-1])
+
+
 
 card = Card()
 deck = Deck(4)
 print(card.chosen_card)
 print(deck.create_list(4))
 print(deck.shuffle())
+deck.draw()
+print(deck.shuffle())
+deck.draw()
+
+
 
 
 
